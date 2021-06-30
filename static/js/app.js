@@ -14,7 +14,7 @@ tableData.forEach((fulltable) => {
   });
 
 // Select the button
-var button = d3.select("#btn btn-default");
+var button = d3.select("button");
 
 // Select the form
 var form = d3.select("#form");
