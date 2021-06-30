@@ -37,14 +37,19 @@ function runEnter() {
 
     var filteredData = tableData.filter(event => event.datetime === inputValue);
 
-  console.log(filteredData);
+    console.log(filteredData);
 
-//   data.forEach((filteredtable) => {
-//     var row = tbody.append("tr");
-//     Object.entries(filteredtable).forEach(([key, value]) => {
-//       var cell = row.append("td");
-//       cell.text(value);
-//     });
-//   });
+    var table = d3.select(".ufo-table");
+
+    // remove any children from the list to
+    table.html("");
+
+    filteredData.forEach((filteredtable) => {
+        var row = tbody.append("tr");
+        Object.entries(filteredtable).forEach(([key, value]) => {
+            var cell = row.append("td");
+            cell.text(value);
+        });
+    });
 
 };  
