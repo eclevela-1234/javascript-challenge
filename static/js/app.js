@@ -14,10 +14,10 @@ tableData.forEach((fulltable) => {
   });
 
 // Select the button
-var button = d3.select("#form");
+var button = d3.select("#btn btn-default");
 
 // Select the form
-var form = d3.select("#datetime");
+var form = d3.select("#form");
 
 // Create event handlers 
 button.on("click", runEnter);
@@ -35,7 +35,7 @@ function runEnter() {
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
 
-    var filteredData = tableData.filter(event => event.datetime === inputValue);
+    var filteredData = tableData.filter(sighting => sighting.datetime === inputValue);
 
     console.log(filteredData);
 
