@@ -5,7 +5,7 @@ var tableData = data;
 var tbody = d3.select("tbody");
 
 // display all data
-data.forEach((fulltable) => {
+tableData.forEach((fulltable) => {
     var row = tbody.append("tr");
     Object.entries(fulltable).forEach(([key, value]) => {
       var cell = row.append("td");
@@ -39,10 +39,10 @@ function runEnter() {
 
     console.log(filteredData);
 
-    var table = d3.select(".ufo-table");
+    var tbody = d3.select("tbody");
 
     // remove any children from the list to
-    table.html("");
+    tbody.html("");
 
     filteredData.forEach((filteredtable) => {
         var row = tbody.append("tr");
